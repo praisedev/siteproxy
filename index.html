@@ -6,13 +6,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <!--title keywords description 请改为自己的-->
-<title>siteproxy代理 - 通向墙外的世界</title>
+<title>WebProxy</title>
 <meta name="keywords" content="bituplink,导航,网址"/>
 <meta name="description" content="本代理一定会被墙,时间不定,请记住开源地址(不会被墙),以便找回新的网址:"/>
 <a href="https://github.com/netptop/siteproxy"> https://github.com/netptop/siteproxy </a>
 
 <!--网站favicon可以没有或者改为自己的-->
-<link rel="shortcut icon" type="image/x-icon" href="/favicon.png"/>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.png"/> -->
 
 <!--CSS 若不需要变动样式不用改-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/zui/1.8.1/css/zui.min.css" rel="stylesheet" type="text/css"/>
@@ -332,6 +332,15 @@ input::-webkit-input-placeholder {
     color: #ccc;
 }
 .search-btn {
+    width: 80px;
+    height: 50px;
+    background: #16C0F8;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+}
+.go-btn {
     width: 80px;
     height: 50px;
     background: #16C0F8;
@@ -722,12 +731,12 @@ input::-webkit-input-placeholder {
 <div class="main">
     <h1 class="logo">
         <img src="/favicon.png"/>
-        <span>Siteproxy代理</span>
+        <span>WebProxy</span>
     </h1>
     <!--顶部导航条-->
     <nav class="nav">
         <ul>
-            <li><a href="/contact-info" target="_blank">联系方式</a></li>
+            <li><a href="mailto:hi@praise.ml" target="_blank">Contact</a></li>
         </ul>
     </nav>
     <!--便携设备右上角菜单-->
@@ -740,23 +749,23 @@ input::-webkit-input-placeholder {
     <!--内容-->
     <div class="main">
         <div class="container content-box">
-            <div class="textBar">注意,本网站:
-                <a href="https://proxy.netptop.com">https://proxy.netptop.com</a> 一定会被墙,时间未知. 请记下项目开源网址(不会被墙):
-                <a href="https://github.com/netptop/siteproxy">https://github.com/netptop/siteproxy</a>
-                以便在本网站失效后能找到新的网址; 或者加入telegram电报群: @siteproxy获取更新.
+            <div class="textBar">Unblock website by accessing:
+                <a href="https://wpvc.praise.ml">https://wpvc.praise.ml</a>
+                <!-- <a href="https://github.com/netptop/siteproxy">https://github.com/netptop/siteproxy</a> -->
+                <!-- 以便在本网站失效后能找到新的网址; 或者加入telegram电报群: @siteproxy获取更新. -->
             </div>
             <!--搜索栏-->
             <section class="sousuo">
             <div class="search">
                 <div class="search-box">
-                    <button class="search-engine-name" id="search-engine-name">Google搜索</button>
-                    <input type="text" id="txt" class="search-input" placeholder="选择引擎，输入关键字，回车/Enter搜索"/>
-                    <button class="search-btn" id="search-btn">搜索</button>
+                    <button class="search-engine-name" id="search-engine-name">Google Search</button>
+                    <input type="text" id="txt" class="search-input" placeholder="Input search 'term' and click Search or press enter"/>
+                    <button class="search-btn" id="search-btn">Search</button>
                 </div>
                 <!-- 搜索引擎 -->
                 <div class="search-engine">
                     <div class="search-engine-head">
-                        <strong class="search-engine-tit">选择您的搜索引擎：</strong>
+                        <strong class="search-engine-tit">Search Engine：</strong>
                     </div>
                     <ul class="search-engine-list">
                     </ul>
@@ -768,17 +777,28 @@ input::-webkit-input-placeholder {
             <div class="container-fluid">
                 <div class="row">
                     <div class="item-tit">
-                        <strong>常用网站</strong>
+                        <strong>Go To Site</strong>
+                    </div>
+                    <br>
+                    <div class="search-box">
+                            <!-- <button class="search-engine-name" id="search-engine-name">Google Search</button> -->
+                            <input type="text" id="txt" class="search-input" placeholder="Input web address and click Go or press enter"/>
+                            <button class="search-btn" id="go-btn">Go</button>
+                        </div>
+                    <br>
+                    <br>
+                    <div class="item-tit">
+                        <strong>Quick Access</strong>
                     </div>
                     <!--获取内容列表-->
                     <div class="clearfix two-list-box">
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="/https/zh.wikipedia.org" class="card-link" target="_blank">
-                            <div class="card-tit">维基百科</div>
+                            <a href="/https/wikipedia.org" class="card-link" target="_blank">
+                            <div class="card-tit">Wikipedia</div>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="/https/www.youtube.com/channel/UCAq_xQV8pJ2Q_KOszzaYPBg/feed?disable_polymer=1" class="card-link" target="_blank">
+                            <a href="/https/www.youtube.com" class="card-link" target="_blank">
                             <div class="card-tit">YouTube</div>
                             </a>
                         </div>
@@ -789,19 +809,19 @@ input::-webkit-input-placeholder {
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/web.telegram.org" class="card-link" target="_blank">
-                            <div class="card-tit">Telegram登录</div>
+                            <div class="card-tit">Telegram</div>
                             </a>
                         </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <!-- <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/telegram.org/dl/android/apk" class="card-link" target="_blank">
-                            <div class="card-tit">Telegram下载</div>
+                            <div class="card-tit">Telegram</div>
                             </a>
-                        </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        </div> -->
+                        <!-- <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/t.me/s/socks5list" class="card-link" target="_blank">
                             <div class="card-tit">Telegram代理</div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -810,36 +830,36 @@ input::-webkit-input-placeholder {
             <div class="container-fluid">
                 <div class="row">
                     <div class="item-tit">
-                        <strong>新闻网站</strong>
+                        <strong>News Portal</strong>
                     </div>
                     <!--获取内容列表-->
                     <div class="clearfix two-list-box">
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <!-- <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/www.voachinese.com/" class="card-link" target="_blank">
                             <div class="card-tit">美国之音</div>
                             </a>
-                        </div>
+                        </div> -->
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="/https/cn.nytimes.com" class="card-link" target="_blank">
-                            <div class="card-tit">纽约时报中文网</div>
+                            <a href="/https/nytimes.com" class="card-link" target="_blank">
+                            <div class="card-tit">NYTIMES</div>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="/https/cn.reuters.com/" class="card-link" target="_blank">
-                            <div class="card-tit">路透社中文</div>
+                            <a href="/https/reuters.com/" class="card-link" target="_blank">
+                            <div class="card-tit">Reuters</div>
                             </a>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="/https/cn.wsj.com/" class="card-link" target="_blank">
-                            <div class="card-tit">华尔街日报</div>
+                            <a href="/https/wsj.com/" class="card-link" target="_blank">
+                            <div class="card-tit">Wall Street Journal</div>
                             </a>
                         </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <!-- <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/www.dw.com/zh/%E5%9C%A8%E7%BA%BF%E6%8A%A5%E5%AF%BC/s-9058" class="card-link" target="_blank">
                             <div class="card-tit">德国之声</div>
                             </a>
-                        </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        </div> -->
+                        <!-- <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/news.creaders.net/breaking/" class="card-link" target="_blank">
                             <div class="card-tit">万维读者</div>
                             </a>
@@ -868,7 +888,7 @@ input::-webkit-input-placeholder {
                             <a href="/https/std.stheadline.com/" class="card-link" target="_blank">
                             <div class="card-tit">星岛日报</div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -877,16 +897,16 @@ input::-webkit-input-placeholder {
             <div class="container-fluid">
                 <div class="row">
                     <div class="item-tit">
-                        <strong>海外论坛</strong>
+                        <strong>Coming Soon</strong>
                     </div>
                     <!--获取内容列表-->
                     <div class="clearfix two-list-box">
                         <div class="col-md-3 col-sm-4 col-xs-6">
-                            <a href="/https/www.wenxuecity.com/news/" class="card-link" target="_blank">
-                            <div class="card-tit">文学城</div>
+                            <a href="/#/" class="card-link" target="_blank">
+                            <div class="card-tit">Coming Soon</div>
                             </a>
                         </div>
-                        <div class="col-md-3 col-sm-4 col-xs-6">
+                        <!-- <div class="col-md-3 col-sm-4 col-xs-6">
                             <a href="/https/www.6parknews.com" class="card-link" target="_blank">
                             <div class="card-tit">留园网</div>
                             </a>
@@ -900,7 +920,7 @@ input::-webkit-input-placeholder {
                             <a href="/http/www.iask.ca/index.html" class="card-link" target="_blank">
                             <div class="card-tit">加拿大家园网</div>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -911,11 +931,11 @@ input::-webkit-input-placeholder {
                 <div class="rwo">
                     <div class="col-md-12">
                         <p>
-                            本站内容源自互联网，如有内容侵犯了你的权益，请联系删除相关内容，联系邮箱：netptop@gmail.com
+                            The content of this site originates from the Internet, if any content infringes your rights, please contact to delete the relevant content, contact email: hi@praise.ml
                         </p>
                         <!--代码源自小呆导航的开源代码，遵循MIT协议，此处保留源代码的声明-->
                         <p>
-                            Copyright © 2020 siteproxy代理 All Rights Reserved
+                            Copyright © 2021 ISENET. All Rights Reserved
                         </p>
                     </div>
                 </div>
@@ -985,16 +1005,16 @@ $(function(){
   var search = {
     data: [
     {
-      name: 'Google搜索',
+      name: 'Google',
       url: '/https/www.google.com/search?q='
     }, {
-      name: 'Bing搜索',
+      name: 'Bing',
       url: '/https/bing.com/search?q='
     }, {
-      name: 'Yahoo搜索',
+      name: 'Yahoo',
       url: '/https/www.yahoo.com/search?q='
     }, {
-      name: 'GitHub搜索',
+      name: 'GitHub',
       url: 'https://github.com/search?q='
     }]
   }
@@ -1019,6 +1039,12 @@ $("#search-btn").click(function(){
   var textValue = $('#txt').val();
   if(textValue != ''){
     window.open(thisSearch + textValue, "_blank")
+  }
+});
+$("#go-btn").click(function(){
+  var textValue = $('#txt').val();
+  if(textValue != ''){
+    window.open("/http/"+textValue)
   }
 });
 </script>
