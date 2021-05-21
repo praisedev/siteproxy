@@ -730,7 +730,7 @@ input::-webkit-input-placeholder {
 <header>
 <div class="main">
     <h1 class="logo">
-        <img src="/favicon.png"/>
+        <img src="/isenet.png"/>
         <span>WebProxy</span>
     </h1>
     <!--顶部导航条-->
@@ -750,12 +750,16 @@ input::-webkit-input-placeholder {
     <div class="main">
         <div class="container content-box">
             <div class="textBar">Unblock website by accessing:
-                <a href="https://wpvc.praise.ml">https://wpvc.praise.ml</a>
+                <a href="https://webproxy.praise.ml">https://webproxy.praise.ml</a> or
+                <a href="https://webproxy2.praise.ml">https://webproxy2.praise.ml</a>
                 <!-- <a href="https://github.com/netptop/siteproxy">https://github.com/netptop/siteproxy</a> -->
                 <!-- 以便在本网站失效后能找到新的网址; 或者加入telegram电报群: @siteproxy获取更新. -->
             </div>
             <!--搜索栏-->
             <section class="sousuo">
+              <div class="item-tit">
+                  <strong>Search Anything</strong>
+              </div>
             <div class="search">
                 <div class="search-box">
                     <button class="search-engine-name" id="search-engine-name">Google Search</button>
@@ -780,10 +784,12 @@ input::-webkit-input-placeholder {
                         <strong>Go To Site</strong>
                     </div>
                     <br>
+                    <div class="search">
                     <div class="search-box">
                             <!-- <button class="search-engine-name" id="search-engine-name">Google Search</button> -->
-                            <input type="text" id="txt" class="search-input" placeholder="Input web address and click Go or press enter"/>
-                            <button class="search-btn" id="go-btn">Go</button>
+                            <input type="text" id="webtxt" class="search-input" placeholder="google.com or praise.ml or facebook.com"/>
+                            <button class="go-btn" id="go-btn">Go</button>
+                        </div>
                         </div>
                     <br>
                     <br>
@@ -1042,7 +1048,7 @@ $("#search-btn").click(function(){
   }
 });
 $("#go-btn").click(function(){
-  var textValue = $('#txt').val();
+  var textValue = $('#webtxt').val();
   if(textValue != ''){
     window.open("/http/"+textValue)
   }
